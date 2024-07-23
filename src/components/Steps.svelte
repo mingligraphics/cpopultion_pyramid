@@ -7,10 +7,11 @@
     // 0 
     `<p><span style="color:white; background-color:#5AC5C2;padding:3.5px;margin:1px;border-radius:4px;font-weight:500">Those born in 1980</span> 
        were the first to be affected by the one-child policy which lasted 35 years.</p>`,
-    `In 2016, China ended the one-child policy. By then,  <span style="color:white; background-color:#5AC5C2;padding:3.5px;margin:1px;border-radius:4px;font-weight:500">an increasing share of  workers had been born during the policy </span>, foreshadowing a worker shortage in the coming decades.`,
+    `In 2016, China ended the one-child policy. By then,  <span style="color:white; background-color:#5AC5C2;padding:3.5px;margin:1px;border-radius:4px;font-weight:500">an increasing share of workers had been born during the policy </span>, foreshadowing a worker shortage in the coming decades.`,
     `The one-child policy has left a dent in the younger portion of today's working-age population.`,
     // 2 
-    `By 2050, the population dent created by the policy means there will be fewer than two Chinese workers for each retiree.`
+    `By 2050, the population dent created by the policy means there will be fewer than two Chinese workers for each retiree.
+    <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Source: United Nations Population Division</span>`
   ];
 
 </script>

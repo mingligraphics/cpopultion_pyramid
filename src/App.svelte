@@ -1,5 +1,5 @@
 <script>
-  import data from "./data/CN_pop_2022.json";
+  import data from "./data/CN_pop_2024.json";
   import { scaleLinear, scaleBand } from "d3-scale";
   import { max } from "d3-array";
   import { fade } from 'svelte/transition';
@@ -40,12 +40,12 @@
 
   //
   let width = 450;
-  let height = 700;
+  let height = 550;
     
   const margin = {
-        top: 30,
+        top: 54,
         right: 10,
-        bottom: 50,
+        bottom: 60,
         left: 10
     }
   $: innerWidth = width - margin.left - margin.right;
@@ -104,7 +104,7 @@
 <main>
   <section>
   <div class="sticky">
-  <div class="chart-container" bind:clientWidth={width}>
+  <div class="chart-container" bind:clientWidth={width} >
     <!-- <label> 
       <input type=radio bind:group={year} name="year" value={1979}>
       1979
@@ -168,10 +168,10 @@
       x1={5} y1={yScale(64)} x2={25} y2={yScale(64)} stroke="currentColor" />
       <line 
       transition:fade={{ delay: 550, duration: 300 }}
-      x1={15} y1={yScale(64)} x2={15} y2={yScale(44)} stroke="currentColor" />
+      x1={15} y1={yScale(64)} x2={15} y2={yScale(46)} stroke="currentColor" />
       <line 
       transition:fade={{ delay: 550, duration: 300 }}
-      x1={15} y1={yScale(38)} x2={15} y2={yScale(19)} stroke="currentColor" />
+      x1={15} y1={yScale(35)} x2={15} y2={yScale(19)} stroke="currentColor" />
       <line transition:fade={{ delay: 550, duration: 300 }}
       x1={5} y1={yScale(19)} x2={25} y2={yScale(19)} stroke="currentColor" />
       <text
@@ -179,16 +179,27 @@
       fill="currentColor"
       text-anchor="right"
       x={-11}
-      y={yScale(40)}
+      y={yScale(42)}
       font-weight=300 
       font-size=15
       >
-      Working-age*
+      Working-age
+      </text>
+      <text
+      class="year-lable"
+      fill="currentColor"
+      text-anchor="right"
+      x={-11}
+      y={yScale(38)}
+      font-weight=300 
+      font-size=15
+      >
+      (20–64)
       </text>
       {/if}
       <text 
     x={xMScale(15000)}
-    y={yScale(95)}
+    y={yScale(98)}
     class="year-lable"
     font-weight=500 
     font-size=36
@@ -200,10 +211,8 @@
     x2={width} 
     y2={innerHeight}
     stroke="#333333"/>
-      </g>
+    </g>
     </svg>
-    <p class="footnote">*Age 20–64
-    <br>Source: United Nations</p>
     </div>
   </div>
     <Steps bind:currentStep/>
@@ -215,6 +224,9 @@
     height:100%;
     width:100%;
     max-width: 500px;
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
     /* position: absolute;
     left: 0px;
     height: 100%;
@@ -255,15 +267,23 @@
       line-height: 15.6px;
     }
 
+    :global(.axis-label){
+      fill: #666;
+      text-anchor: start;
+      font-family: RetinaNarrowLight,  sans-serif;
+      font-size: 13px;
+      line-height: 15.6px;
+    }
+
     :global(.axis-title){
         line-height: 13px;
     }
-    .footnote{
+    /* .footnote{
     color: #727272;
     font-weight: 300;
     font-family: Retina, sans-serif;
     font-size: 13px;
     line-height: 17px;
     margin-top:4px;
-  }
+  } */
     </style>
